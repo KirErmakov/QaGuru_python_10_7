@@ -1,7 +1,5 @@
 from zipfile import ZipFile
-
 import pytest
-
 from Pathes import *
 
 
