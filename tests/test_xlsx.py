@@ -1,6 +1,7 @@
 import os
 from openpyxl import load_workbook
 
+
 def test_xlsx(create_zip):
     xlsx_path = os.path.join(create_zip, 'file_example_XLSX_50.xlsx')
     work_book = load_workbook(xlsx_path)
@@ -15,7 +16,6 @@ def test_xlsx(create_zip):
 
     assert max_row == expected_rows
     assert max_column == expected_columns
-
 
     title = sheet.cell(row=1, column=5).value
     assert title == "Country"
